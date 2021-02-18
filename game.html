@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>game</title>
+</head>
+<script>
+
+    var car=function(f,p){
+        var fuel=f;
+        var power=p;
+        var total=0;
+        return{
+            run: function(km){
+            var waste=km/this.power;
+            if(this.fuel<waste){
+                alert("이동불가");
+                return;
+            } 
+            this.fuel -= waste;
+            this.total += km;
+        }
+    }
+}
+</script>
+<body>
+    
+</body>
+</html>
