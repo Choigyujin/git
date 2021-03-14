@@ -14,7 +14,7 @@
 </head>
 <body>
     <div id="app">
-        <p v-bind:class="{warning:isError}">HELLO!</p>
+        <p v-bind:class="errorTextColor">HELLO!</p>
     </div>
 </body>
 <script>
@@ -23,6 +23,11 @@
         data:{
             //cname:"blue-text",
             isError:true
+        },
+        computed:{
+            errorTextColor:function(){
+                return this.isError? "warning":null;
+            }
         }
     });
 </script>
