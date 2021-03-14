@@ -23,13 +23,13 @@
             }
         },
         watch:{
-            num:function(newValue){
+            num:function(newValue,oldValue){
                 this.userBynumber(newValue);
             }
         },
         methods:{
             userBynumber:function(num){
-                console.log(num)
+                axois.get(num);
             }
         }
     });
